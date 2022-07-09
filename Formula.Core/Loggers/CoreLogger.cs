@@ -18,6 +18,12 @@ namespace Formula.Core.Loggers
 	/// IMPORTANT: You must Set the LoggerFactory to an instance of your application LoggerFactory in your application if you 
 	///				want to inherit the Application defined Logger setup and configuration.
 	/// </summary>
+	/// <example>
+	/// This will generally be created at the class level for each class you will need logging
+	/// <code>
+	///		 ILogger _log = CoreLogger.GetLogger<T>();
+	/// </code>
+	/// </example>
 	public static class CoreLogger
     {
 		private static ILoggerFactory _loggerFactory;
