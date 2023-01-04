@@ -20,10 +20,6 @@ namespace Formula.Core.UnitTests.Utils
             {
                 Guid guid = r.GetGuid();
 
-                int byteSize = 1000;
-                var bytes = r.GetBytes(byteSize);
-                Assert.True( bytes.Length == byteSize );
-         
                 var randDouble = r.GetDouble();
                 Assert.True(randDouble < 1.00);
 

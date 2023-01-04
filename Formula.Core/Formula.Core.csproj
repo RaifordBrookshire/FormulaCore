@@ -5,7 +5,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Raiford Brookshire</Authors>
     <Company>Formula Code Software</Company>
-    <Description>Light-weight C# class library with thin wrappers around the .NET native ILogger and IServiceProvider to be used as an abstraction layer for our companies Formula Common Components.</Description>
+    <Description>Light-weight C# class library with some base abstractions and utilities that can be used in .NET 6.0+ applications. This is a personal project that I use for our companies C# Applications.</Description>
     <PackageProjectUrl>https://github.com/RaifordBrookshire/FormulaCore</PackageProjectUrl>
     <RepositoryUrl>https://github.com/RaifordBrookshire/FormulaCore</RepositoryUrl>
     <RepositoryType>git</RepositoryType>

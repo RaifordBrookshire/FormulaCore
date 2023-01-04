@@ -16,13 +16,6 @@ namespace Formula.Core.Utils
         {
         }
 
-        public byte[] GetBytes(int size)
-        {
-            byte[] bytes = new byte[size];
-            _random.NextBytes(bytes);
-            return bytes;
-        }
-
         /// <summary>
         /// Returns a random number within a specified range.
         /// </summary>

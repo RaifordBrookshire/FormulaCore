@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Formula.Core.Utils
@@ -13,8 +14,11 @@ namespace Formula.Core.Utils
 	/// Ex.
 	/// Transformer.StringToBytes("string");
     /// </summary>
-    public class Transformer
+    public class ByteUtils
     {
+
+		private static Random _random = new Random();
+
 		/// <summary>
 		/// Transforms a String to a Byte Array
 		/// </summary>
@@ -51,5 +55,51 @@ namespace Formula.Core.Utils
 			}
 			return builder.ToString();
 		}
+
+		static public bool CompareBytes(byte[] bytes1, byte[] bytes2)
+		{
+			// This might not be needed and based on performace could be refactored out
+			if (bytes1.Length != bytes2.Length)
+				return false;
+
+			return bytes1.SequenceEqual(bytes2);
+		}
+
+		static public string ToHashString(byte[] bytes)
+		{
+			// Convert bytes to string. NOTE: the string will contain dashes whihich we wil remove
+			string hash = BitConverter.ToString(bytes);
+
+			// Remove the dashes
+			return hash.Replace("-", "");
+		}
+
+		//// Needs Testing and refactoring
+		//public static void PrintByteArray(byte[] array)
+		//{
+		//    int i;
+		//    for (i = 0; i < array.Length; i++)
+		//    {
+		//        Console.Write(String.Format("{0:X2}", array[i]));
+		//        if ((i % 4) == 3) Console.Write(" ");
+		//    }
+		//    Console.WriteLine();
+		//}
+
+		public static byte[] Combine(byte[] first, byte[] second)
+		{
+			byte[] buffer = new byte[first.Length + second.Length];
+			Buffer.BlockCopy(first, 0, buffer, 0, first.Length);
+			Buffer.BlockCopy(second, 0, buffer, first.Length, second.Length);
+			return buffer;
+		}
+
+		public  static byte[] GetBytes(int size)
+		{
+			byte[] bytes = new byte[size];
+			_random.NextBytes(bytes);
+			return bytes;
+		}
+
 	}
 }
