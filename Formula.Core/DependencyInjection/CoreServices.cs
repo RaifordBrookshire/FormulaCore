@@ -6,8 +6,6 @@ using System.Text;
 namespace Formula.Core.DependencyInjection
 {
 
-
-
 	/// <summary>
 	/// 
 	/// NOTE: CORESERVICES IS STILL UNDER DEVELOPMENT AND NOT READY FOR PRIME TIME

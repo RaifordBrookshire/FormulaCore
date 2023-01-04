@@ -24,7 +24,6 @@ namespace Formula.Core.Utils
 		{
 			byte[] bytes = Encoding.UTF8.GetBytes(text);
 			return bytes;
-
 		}
 
 		/// <summary>
@@ -36,7 +35,6 @@ namespace Formula.Core.Utils
 		{
 			string text = Encoding.UTF8.GetString(bytes); ;
 			return text;
-
 		}
 
 		/// <summary>

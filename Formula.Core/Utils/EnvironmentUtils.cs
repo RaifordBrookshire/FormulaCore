@@ -23,19 +23,5 @@ namespace Formula.Core.Utils
 			}
 		}
 
-
-		/// <summary>
-		/// Returns the physical application root for a web application or the executing folder for a windows app. 
-		/// 
-		/// </summary>
-		public static string ApplicationBaseFolder
-		{
-			get
-			{
-				// This needs testing
-				string path = System.AppDomain.CurrentDomain.BaseDirectory;
-				return path;
-			}
-		}
 	}
 }
