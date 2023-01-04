@@ -65,15 +65,7 @@ namespace Formula.Core.Utils
 			return bytes1.SequenceEqual(bytes2);
 		}
 
-		static public string ToHashString(byte[] bytes)
-		{
-			// Convert bytes to string. NOTE: the string will contain dashes whihich we wil remove
-			string hash = BitConverter.ToString(bytes);
-
-			// Remove the dashes
-			return hash.Replace("-", "");
-		}
-
+		
 		//// Needs Testing and refactoring
 		//public static void PrintByteArray(byte[] array)
 		//{
